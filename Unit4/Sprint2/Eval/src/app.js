@@ -2,16 +2,9 @@ const express=require("express");
 const connect =require("./configs/db");
 const app=express();
 app.use(express.json());
+const crudJobs=require("./controller/job.controller");
 
-
-
-
-
-
-
-
-
-
+app.use("/jobs",crudJobs);
 
 app.listen(12345,async()=>{
     await connect();
