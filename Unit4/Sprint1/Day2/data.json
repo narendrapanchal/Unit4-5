@@ -1,0 +1,92 @@
+[
+    {
+    "id": 1,
+    "first_name": "Arel",
+    "email": "akonmann0@ihg.com",
+    "gender": "Non-binary"
+  }, 
+  {
+    "id": 2,
+    "first_name": "Alyse",
+    "email": "amcillrick1@tumblr.com",
+    "gender": "Agender"
+  }, 
+  {
+    "id": 3,
+    "first_name": "Jourdain",
+    "email": "jboxen2@foxnews.com",
+    "gender": "Non-binary"
+  },
+   {
+    "id": 4,
+    "first_name": "Mellisent",
+    "email": "mpavlata3@ucoz.com",
+    "gender": "Agender"
+  },
+   {
+    "id": 5,
+    "first_name": "Bradford",
+    "email": "bcyples4@aol.com",
+    "gender": "Polygender"
+  },
+   {
+    "id": 6,
+    "first_name": "Ginny",
+    "email": "grubinowitsch5@simplemachines.org",
+    "gender": "Non-binary"
+  },
+   {
+    "id": 7,
+    "first_name": "Shane",
+    "email": "sflanigan6@google.co.jp",
+    "gender": "Bigender"
+  },
+   {
+    "id": 8,
+    "first_name": "Eberhard",
+    "email": "edemeter7@adobe.com",
+    "gender": "Agender"
+  },
+   {
+    "id": 9,
+    "first_name": "Silvio",
+    "email": "sstansbury8@intel.com",
+    "gender": "Bigender"
+  },
+   {
+    "id": 10,
+    "first_name": "Sloane",
+    "email": "skyllford9@nytimes.com",
+    "gender": "Agender"
+  }, 
+  {
+    "id": 11,
+    "first_name": "Fransisco",
+    "email": "frodliffa@mapy.cz",
+    "gender": "Bigender"
+  },
+   {
+    "id": 12,
+    "first_name": "Jerrylee",
+    "email": "jskitterelb@yolasite.com",
+    "gender": "Agender"
+  },
+   {
+    "id": 13,
+    "first_name": "Cara",
+    "email": "cbentjec@tiny.cc",
+    "gender": "Polygender"
+  }, 
+  {
+    "id": 14,
+    "first_name": "Dalia",
+    "email": "djefferysd@washington.edu",
+    "gender": "Non-binary"
+  },
+   {
+    "id": 15,
+    "first_name": "Jase",
+    "email": "jlosekee@shinystat.com",
+    "gender": "Genderqueer"
+  }
+]

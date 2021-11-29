@@ -1,0 +1,49 @@
+use test1
+
+db.createCollection('users')
+
+db.users.find({}).pretty()
+
+db.users.findOne({firstname:"Narendra3"})
+
+db.users.insert({ "firstname" : "Narendra3", 
+"age" : 213, "email" : "narendrapanchal0204@gmail.com",
+ "gender" : "male", "ip_address" : "12344", "lastname2"
+:"Panchal4"})
+
+
+db.users.update({firstname:"Narendra"},
+{$set:{lastname:"Panchal",email:"narendrapanchal020@gmail.com"
+,gender:"male",ip_address:"1234",age:21,}})
+
+db.users.insertMany([{ "firstname" : "Narendra3", 
+"age" : 213, "email" : "narendrapanchal0204@gmail.
+com", "gender" : "male", "ip_address" : "12344", "
+lastname2" : "Panchal4"},{ "firstname" : "Narendra3",
+ "age" : 213, "email" : "narendrapanchal0204@gmail.com",
+ "gender" : "male", "ip_address" : "12344", "lastname2" : 
+"Panchal4"},{ "firstname" : "Narendra3", "age" : 213,
+ "email" : "narendrapanchal0204@gmail.com", "gender" :
+ "male", "ip_address" : "12344", "lastname2" :
+ "Panchal4"},{ "firstname" : "Narendra3", "age" 
+: 213, "email" : "narendrapanchal0204@gmail.com", "gender"
+ : "male", "ip_address" : "12344", "lastname2" : "Panchal4"},
+{ "firstname" : "Narendra3", "age" : 213, "email" : 
+"narendrapanchal0204@gmail.com", "gender" : "male", 
+"ip_address" : "12344", "lastname2" : "Panchal4"},{ 
+"firstname" : "Narendra3", "age" : 213, "email" : 
+"narendrapanchal0204@gmail.com", "gender" : "male",
+ "ip_address" : "12344", "lastname2" : "Panchal4"}])
+
+
+
+db.users.update({firstname:"Narendra3"},{$set:{"firstname":"Lastname"}})
+
+ db.users.updateMany({firstname:"Narendra3"},{$set:{"firstname":"Lastname"}})
+
+db.users.deleteOne({firstname: "kl"},1)
+
+db.users.deleteMany({firstname: "kl"})
+
+db.users.drop()
+db.dropDatabase()
