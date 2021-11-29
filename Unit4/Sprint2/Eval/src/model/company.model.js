@@ -8,4 +8,4 @@ const companySchema=mongoose.Schema({
         required:true,
     }]
 })
-module.exports= mongoose.model("company",companySchema);
+module.exports= mongoose.model("companies",companySchema);
