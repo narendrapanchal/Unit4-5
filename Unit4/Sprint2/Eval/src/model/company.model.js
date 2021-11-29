@@ -7,5 +7,8 @@ const companySchema=mongoose.Schema({
         ref:"job",
         required:true,
     }]
+},{
+    versionKey:false,
+    timestamps:false
 })
 module.exports= mongoose.model("companies",companySchema);
