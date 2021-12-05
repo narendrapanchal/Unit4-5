@@ -21,7 +21,6 @@ router.post("",upload.single("image"), async (req, res) => {
         const filepaths=req.files.map((file)=>file.path);
         console.log(filepaths.length);
         if((filepaths.length)<6){
-      const galleries = await Gallery.create({
         picture:filepaths,
         userId:req.body.userId,
        

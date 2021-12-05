@@ -47,7 +47,7 @@ router.post("",upload.single("image"), async (req, res) => {
      if(req.file.path){
       const oneuser=await User.findById(req.params.id).lean().exec();
       let picture=oneuser.profile_pic;
-       fs.unlinkSync(picture)
+      fs.unlinkSync(picture);
       req.body.profile_pic=req.file.path;
       delete req.file;
      }
