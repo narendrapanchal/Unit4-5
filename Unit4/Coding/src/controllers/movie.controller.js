@@ -12,6 +12,7 @@ router.post=("/",authenticate,async(req,res)=>{
             directors:req.body.directors,
             poster_url:req.body.poster_url,
         })
+        res.status(200).send(posts);
     }catch(e){
         res.status(500).send({error:e});
     }
@@ -20,6 +21,7 @@ router.get=("/",authenticate,async(req,res)=>{
     try{
         const user=req.user;
         const posts=await Movie.find().lean().exec();
+        res.send(posts);
     }catch(e){
         res.status(500).send({error:e});
     }

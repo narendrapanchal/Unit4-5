@@ -9,6 +9,7 @@ router.post=("/",authenticate,async(req,res)=>{
             name:req.body.name,
             location:req.body.location,
         })
+        res.status(200).send(posts);
     }catch(e){
         res.status(500).send({error:e});
     }
@@ -17,6 +18,7 @@ router.get=("/",authenticate,async(req,res)=>{
     try{
         const user=req.user;
         const posts=await Theater.find().lean().exec();
+        res.send(posts);
     }catch(e){
         res.status(500).send({error:e});
     }
