@@ -6,7 +6,7 @@ const showSchema=new Schema({
         ref:"movie",
         required:true,
     },
-    total_seat:{type:Number},
+    total_seats:{type:Number,required:true},
     screen_Id:{ type:Schema.Types.ObjectId,
         ref:"screen",
         required:true,
