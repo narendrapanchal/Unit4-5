@@ -17,12 +17,13 @@ userSchema.pre("save",function(next){
         return next();
     })
 })
-userSchema.methods.checkPassword= function(password){
-    return new Promise ((resolve,reject)=>{
-        bcrypt.compare(password,this.password,function(err,same){
-            if(err) return reject (err);
-            return resolve(same);
-        })
-    })
-}
+userSchema.methods.checkPassword = function (password) {
+    return new Promise((resolve, reject) => {
+      bcrypt.compare(password, this.password, function (err, same) {
+        if (err) return reject(err);
+  
+        return resolve(same);
+      });
+    });
+  };
 module.exports=model("user",userSchema);

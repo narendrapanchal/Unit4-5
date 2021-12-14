@@ -2,7 +2,7 @@ const express= require("express");
 let router=express.Router();
 let authenticate=require("../middlewares/authenticate");
 let Theater=require("../models/theater.model");
-router.post=("/",authenticate,async(req,res)=>{
+router.post("/",authenticate,async(req,res)=>{
     try{
         const user=req.user;
         const posts=await Theater.create({
@@ -13,8 +13,8 @@ router.post=("/",authenticate,async(req,res)=>{
     }catch(e){
         res.status(500).send({error:e});
     }
-})
-router.get=("/",authenticate,async(req,res)=>{
+});
+router.get("/",authenticate,async(req,res)=>{
     try{
         const user=req.user;
         const posts=await Theater.find().lean().exec();

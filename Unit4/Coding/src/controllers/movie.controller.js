@@ -2,22 +2,17 @@ const express= require("express");
 let router=express.Router();
 let authenticate=require("../middlewares/authenticate");
 let Movie=require("../models/movie.model");
-router.post=("/",authenticate,async(req,res)=>{
+router.post("",authenticate,async(req,res)=>{
     try{
         const user=req.user;
-        const posts=await Movie.create({
-            name:req.body.name,
-            actors:req.body.actors,
-            languages:req.body.languages,
-            directors:req.body.directors,
-            poster_url:req.body.poster_url,
-        })
+        console.log("Hi Movie")
+        const posts=await Movie.create(req.body);
         res.status(200).send(posts);
     }catch(e){
-        res.status(500).send({error:e});
+        res.status(500).send({error:e,message:e.message});
     }
 })
-router.get=("/",authenticate,async(req,res)=>{
+router.get("/",authenticate,async(req,res)=>{
     try{
         const user=req.user;
         const posts=await Movie.find().lean().exec();
@@ -26,10 +21,10 @@ router.get=("/",authenticate,async(req,res)=>{
         res.status(500).send({error:e});
     }
 })
-router.get=("/actor",authenticate,async(req,res)=>{
+router.get("/actor",authenticate,async(req,res)=>{
     try{
         const user=req.user;
-        const posts=await Movie.find().lean().exec();
+        const posts=await Movie.find();
         let obj=[];
         posts.forEach((ele)=>{
             let arr=ele.actors;
@@ -44,7 +39,7 @@ router.get=("/actor",authenticate,async(req,res)=>{
         })
         res.send(obj);
     }catch(e){
-        res.status(500).send({error:e});
+        res.status(500).send({error:e,message:e.message});
     }
 })
 
