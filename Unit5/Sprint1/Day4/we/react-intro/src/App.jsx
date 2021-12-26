@@ -1,18 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-import {Todos,Todo} from "./components/Todo"
+import { useState } from 'react';
 function App() {
-  let head1="First";
-  let head2="second"
-  let style={
-    textAlign:"left",
-    marginLeft:"20px"
+  const [count, setCount]=useState(1);
+
+  const addOne=(value)=>{
+    
+    if(value==2){
+      setCount((prev)=>{
+        if(prev>100)
+        return 0;
+        else return prev*2
+      })
+    }else
+    setCount(count+value)
   }
+
   return (
-    <div className="App" style={style}>
-      {true?<h1>Hi Narendra</h1>:<h1>By Narendra</h1>}
-      <Todos head={head1} arr={["first","first","first","first","first"]}/>
-      <Todos head={head2} arr={["Second","first","first","first","first"]}/>
+    <div className="App" >
+      <h3>count {count}</h3>
+      <button onClick={()=>addOne(1)}>Addone 1</button>
+      <button onClick={()=>addOne(-1)}>Decone 1</button>
+      <br />
+      <button onClick={()=>{addOne(2)}}>Mul * 2</button>
     </div>
   );
 }

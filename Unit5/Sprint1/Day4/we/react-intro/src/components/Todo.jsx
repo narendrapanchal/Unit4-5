@@ -1,10 +1,5 @@
-function Todos({head,arr}){
-    return <div>
-  <h1> {head}</h1>
-  <ul>
-    {arr.map((e)=>(<li>{e}</li>))}
-  </ul>
-    </div>
+function Todos({num}){
+    return <h1>{num}</h1>
   }
 
   export  {Todos}
