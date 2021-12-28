@@ -30,5 +30,14 @@ function runProgram(input) {
     });
   }
   function output(n,arr){
-
+      let obj={};
+      for(let i=0;i<n;i++){
+          if(obj[arr[i]]===undefined){
+              obj[arr[i]]=1;
+          }else{
+              obj[arr[i]]++;
+          }
+      }
+     console.log(obj)
+     
   }

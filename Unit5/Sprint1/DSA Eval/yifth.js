@@ -30,5 +30,5 @@ function runProgram(input) {
     });
   }
   function output(n,arr){
-
+      c
   }

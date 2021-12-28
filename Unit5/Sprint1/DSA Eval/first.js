@@ -30,5 +30,13 @@ function runProgram(input) {
     });
   }
   function output(n,arr){
-
+      let inc=arr[0];
+      let exc=0;
+      for(let i=1;i<n;i++){
+           let ninc=exc+arr[i];
+           let nexc=Math.max(exc,inc);
+           inc=ninc;
+           exc=nexc;
+      }
+      console.log(Math.max(exc,inc));
   }
