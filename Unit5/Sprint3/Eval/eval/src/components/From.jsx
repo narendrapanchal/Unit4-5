@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const Form =(getData)=>{
+export const Form =()=>{
     const [data,setData]=useState({
         Title:"",
         Ingrediants:"",
@@ -12,8 +12,10 @@ export const Form =(getData)=>{
        let [name,value]=e.target;
        setData({...data,[name]:value});
    } 
-   const handleData=()=>{
-       getData(data);
+   const handleData=(e)=>{
+       e.preventDefault();
+    //    getData(data);
+    console.log(data);
    }
     return (
         <div>
