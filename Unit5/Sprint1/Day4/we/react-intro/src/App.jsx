@@ -4,12 +4,11 @@ function App() {
   const [count, setCount]=useState(1);
 
   const addOne=(value)=>{
-    
     if(value==2){
       setCount((prev)=>{
         if(prev*2>100)
         return 0;
-        else return prev*2
+        else return prev*2;
       })
     }else
     setCount(count+value)

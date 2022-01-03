@@ -10,7 +10,7 @@ export const Todo=()=>{
            status:false,
            id:nanoid(7)
        }
-       setList([...list,payload])
+       setList([...list,payload]);
        console.log(list);
    }
    const handleToggle=(id)=>{
