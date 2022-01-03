@@ -1,15 +1,60 @@
 {
   "recepie": [
-    
-  ],
-  "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "chicken",
+      "ingrediants": "hn",
+      "time": "12",
+      "image": "sdsv",
+      "instructions": "dsfvc",
+      "id": 1
+    },
+    {
+      "title": "chicken",
+      "ingrediants": "hn",
+      "time": "12",
+      "image": "sdsv",
+      "instructions": "dsfvc",
+      "id": 2
+    },
+    {
+      "title": "chicken",
+      "ingrediants": "hn",
+      "time": "12",
+      "image": "sdsv",
+      "instructions": "dsfvc",
+      "id": 3
+    },
+    {
+      "title": "hi",
+      "ingrediants": "kjasdb",
+      "time": "12",
+      "image": "kjabds",
+      "instructions": "akjdsb",
+      "id": 4
+    },
+    {
+      "title": "qw",
+      "ingrediants": "sad",
+      "time": "21",
+      "image": "asdasd",
+      "instructions": "asd",
+      "id": 5
+    },
+    {
+      "title": "q2121",
+      "ingrediants": "sad",
+      "time": "21",
+      "image": "asdasd",
+      "instructions": "asd",
+      "id": 6
+    },
+    {
+      "title": "q212132",
+      "ingrediants": "sad",
+      "time": "21",
+      "image": "asdasd",
+      "instructions": "asd",
+      "id": 7
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

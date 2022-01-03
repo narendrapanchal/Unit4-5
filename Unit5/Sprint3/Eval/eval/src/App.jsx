@@ -6,8 +6,8 @@ function App() {
   const [show,setShow]=useState(false);
 
   return (
-    <div className="App">
-     <h3>hi</h3>
+    <div>
+  
      {/* {show?<Form/>:null} */}
       {/* <button onClick={()=>setShow((!show))}>{!show?"show":"hide"}</button> */}
       {/* <Recepie></Recepie> */}

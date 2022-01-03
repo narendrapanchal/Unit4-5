@@ -1,5 +1,16 @@
 .App {
-
+  display: grid;
+  grid-template-columns: 50% 50%;
+    height: 500px;
+    align-items: center;
+    margin-left: 25%;
+  
+}
+.App >div {
+  height: 300px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  width: 300px;
 }
 
 .App-logo {
@@ -35,4 +46,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Centrue{
+  text-align: center;
+}
+.Formargin{
+  margin-top: 50px;
 }

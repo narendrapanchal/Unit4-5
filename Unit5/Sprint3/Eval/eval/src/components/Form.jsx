@@ -1,6 +1,6 @@
 import { useState } from "react"
-
-export const Form =()=>{
+import '../App.css';
+export const Form =({getData})=>{
     const [data,setData]=useState({
         title:"",
         ingrediants:"",
@@ -13,21 +13,22 @@ export const Form =()=>{
        setData({...data,
         [name]:value});
    } 
-   const handleData=(e)=>{
-       e.preventDefault();
-    //    getData(data);
+   const handleData=()=>{
+       
+       getData(data);
     console.log(data);
    }
     return (
-        <div>
-            <form action="" onSubmit={handleData}>
+       
+       <div>
             <input type="text" name="title" placeholder="Title"onChange={handleChange} ></input>
+            <br />
             <input type="text" name="ingrediants" placeholder="Ingrediants" onChange={handleChange}  ></input>
-            <input type="number" name="time" placeholder="Time to coock" onChange={handleChange}  ></input>
-            <input type="text" name="image" placeholder="Image Link" onChange={handleChange}></input>
-            <input type="text" name="instructions" placeholder="Instaruction" onChange={handleChange} ></input>
-            <input type="submit" >Submit</input>
-            </form>
-        </div>
+            <br />  <input type="number" name="time" placeholder="Time to coock" onChange={handleChange}  ></input>
+            <br />  <input type="text" name="image" placeholder="Image Link" onChange={handleChange}></input>
+            <br />  <input type="text" name="instructions" placeholder="Instaruction" onChange={handleChange} ></input>
+            <br /> <button onClick={handleData}>Submit</button>
+            </div>
+   
     )
 }
