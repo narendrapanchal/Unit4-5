@@ -3,7 +3,7 @@ import './App.css';
 import { Button,Div,Theme } from './components/Button';
 import { useState } from 'react';
 function App() {
-  const [theme,steTheme]=useState();
+  const [theme,steTheme]=useState("white");
   return (
     <div className="App">
       <Button theme={theme} onClick={()=>{
