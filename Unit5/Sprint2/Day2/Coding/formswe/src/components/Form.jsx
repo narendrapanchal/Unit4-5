@@ -1,10 +1,13 @@
 import {useRef, useState} from "react"
-export const Form=()=>{
+export const Form=({getData,children})=>{
 const [form,setForm]=useState({
     username:"",
     age:"",
     address:"",
-    file:""
+    depart:false,
+    salary:0,
+    married:false,
+    photo:""
   });
   const ref=useRef(null);
   const handleChange=(e)=>{
@@ -19,6 +22,7 @@ const [form,setForm]=useState({
   const handleSubmit=(e)=>{
     e.preventDefault();
     console.log(form);
+    getData(form)
   }
   return (
       <form onSubmit={handleSubmit}>
@@ -46,7 +50,19 @@ const [form,setForm]=useState({
       type="text"
       placeholder="enter address"
       ></input>
-      <input type="file" ref={ref} onChange={handleChange} name="file" id="" />
+      <input 
+      onChange={handleChange}
+      name="depart"
+      type="checkbox"
+      placeholder="any depart"
+      ></input>
+      <input 
+      onChange={handleChange}
+      name="photo"
+      type="text"
+      placeholder="Photo link"
+      ></input>
+
       <input type="submit" value="submit"></input>
       </form>
   )

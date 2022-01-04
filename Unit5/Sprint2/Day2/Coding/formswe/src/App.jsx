@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { Form } from './components/Form';
+import { Todo } from './components/List';
 import {useState,useRef, useEffect} from "react"
 function App() {
   const test=useRef(1);
@@ -19,7 +19,7 @@ function App() {
       <button onClick={()=>{
         console.log(inputRef.current.value)
       }}>button</button>   */}
-      <Form></Form>
+      <Todo></Todo>
     </div>
   );
 }

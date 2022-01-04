@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
-
+import { Form } from "./Form";
 export const Todo=()=>{
-    const [text,setText]=useState("");
     const [todo,setTodo]=useState([]);
     const [page,setPage]=useState(1);
     useEffect(()=>{
@@ -11,7 +10,7 @@ export const Todo=()=>{
     getTodo()
     },[page])
     const getTodo=()=>{
-        fetch(`http://localhost:3001/todo?_page=${page}&_limit=3`)
+        fetch(`http://localhost:3001/users?_page=${page}&_limit=5`)
         .then((res)=>res.json())
         .then((res)=>{
             setTodo(res);
@@ -19,13 +18,9 @@ export const Todo=()=>{
         })
         console.log(todo)
     }
-    const addTodo=()=>{
-        const payload={
-            title:text,
-            status:false
-        };
-       
-        fetch("http://localhost:3001/todo",{
+    const changehappen=(payload)=>{
+        console.log(payload,"payload")
+        fetch("http://localhost:3001/users",{
             method:"POST",
             body:JSON.stringify(payload),
             headers:{
@@ -34,20 +29,25 @@ export const Todo=()=>{
         })
             getTodo();
     }
+    const  deletekaro =(id)=>{
+        console.log(id)
+         fetch(`http://localhost:3001/users/${id}`,{
+    method: "DELETE",
+    headers:{
+        "Content-Type":"application/json"
+    },
+    })
+    getTodo();
+}
     return(
         <div>
-            <input
-             type="text"
-              value={text} 
-              onChange={(e)=> setText(e.target.value)}
-               placeholder="Enter Todo" />
-            <button 
-            onClick={addTodo} 
-            >Add todo</button>
+           
+            <Form getData={changehappen} ></Form>
             {
                 todo.map((e,i)=>
-                
-                   ( <div key={i}> {e.title}</div>)
+                   ( <div key={i}> {e.username} {e.id} <button onClick={()=>{
+                       deletekaro(e.id);
+                   }}>Delete</button></div>)
                 )
             }
             <button disabled={page==1} onClick={()=>{setPage(page-1)}}>Prev</button>

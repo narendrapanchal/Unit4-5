@@ -1,19 +1,22 @@
 import {Input} from "./Input"
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 export const Form=()=>{
     let temp;
-    let [start,setStart]=useState(1);
-    let [end,setEnd]=useState(7);
+    let [start,setStart]=useState(0);
+    let [end,setEnd]=useState(0);
+    let id=useRef();
+    let [bool,setBool]=useState(false);
     useEffect(()=>{
-        
-        const id=setInterval(()=>{
+        if(id.current==null){
+         id.current=setInterval(()=>{
             // if(temp)
             // clearInterval(id);
             setStart((prev)=>
            {
             console.log(prev)
                if(prev>=end){
-                   clearInterval(id);
+                   clearInterval(id.current);
+                   id.current=null
                    return prev
                }else{
                    return prev+=1;
@@ -21,49 +24,30 @@ export const Form=()=>{
            
            }
        );
-        
 
        },1000);
+    }
     
        return ()=>{
        console.log("Hi Unmouted");
-       clearInterval(id);
+       clearInterval(id.current);
+       id.current=null
        }
-    },[])
-    const handleData=(first)=>{
-        temp=first;
-        setStart((prev)=>{
-            prev=+first.start;
-            return prev;
-        });
-        setEnd((pre)=>{
-            pre=+first.end;
-            return pre;
-        })
-   console.log(start,end);
-   const id=setInterval(()=>{
-            
-    setStart((prev)=>
-   {
-    console.log(prev)
-       if(prev>=end){
-           clearInterval(id);
-           return prev
-       }else{
-           return prev+=1;
-       }
-   
-   }
+    },[bool])
 
-);
-
-
-},1000);
-    }
+  
     return (
         <div>   
             <h2>count {start}</h2> 
-            <Input getData={handleData}></Input>
+            <input type="number" onChange={(e)=>{
+                setStart((prev)=>{
+                    prev=+e.target.value
+                    return prev}) }} name="" id="" ></input>
+                     <input type="number" onChange={(e)=>{
+                setEnd((prev)=>{
+                    prev=+e.target.value
+                    return prev}) }} name="" id="" ></input>
+                    <button onClick={()=>{setBool(prev=> !prev)}}>Apply</button>
         </div>
     )
 }

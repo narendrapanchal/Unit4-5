@@ -11,9 +11,9 @@ function App() {
     <div className="App">
       {/* <Form/> */}
       {/* <Todo/> */}
-      {show?<Form/>:null}
-      <button onClick={()=>setShow((!show))}>{!show?"show":"hide"}</button>
-
+      {/* {show?<Form/>:null}
+      <button onClick={()=>setShow((!show))}>{!show?"show":"hide"}</button> */}
+<Form></Form>
     </div>
   );
 }

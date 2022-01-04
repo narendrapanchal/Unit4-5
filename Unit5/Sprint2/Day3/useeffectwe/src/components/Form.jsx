@@ -30,49 +30,26 @@ export const Form =()=>{
     let handleEnd=(e)=>{
         setEnd(+e.target.value)
       }
-    //   console.log(start, end)
-    // useEffect(()=>{
-    //     const id = setInterval(()=>{
-    //         setStart((p)=>
-    //         {if(end==p){
-    //             clearInterval(id);
-    //             return p
-    //         } else return p+1}
-    //         )
-    //     },1000)  
-    // },[])
+      console.log(start, end)
+    useEffect(()=>{
+        const id = setInterval(()=>{
+            setStart((p)=>
+            {if(end==p){
+                clearInterval(id);
+                return p
+            } else return p+1}
+            )
+        },1000)  
+    },[])
 
-    function Starttimer(){
-        
-            const id = setInterval(()=>{
-                setStart((p)=>
-                {if(end==p){
-                    clearInterval(id);
-                    return p
-                } else return p+1}
-                )
-            },1000)  
-    }
-    
-    function Starr(e){
-        setStart(e.target.start);
-        // const id = setInterval(()=>{
-        //     setStart((p)=>
-        //     {if(end==p){
-        //         clearInterval(id);
-        //         return p
-        //     } else return p+1}
-        //     )
-        // },1000)  
-    // Starttimer();
-}
+   
+  
   return   <div>
          <h1>count is {start}</h1>
         <input name="start" type="number"  placeholder="Start Time"onChange={handleStart} />
          <input type="number" name="end" placeholder="End Time" onChange={handleEnd}/>
-         <br />
-         <button onClick={()=>Starttimer()}>apply</button>
-         <button onClick={()=>Starr()}>apply</button>
+         
+        
     </div>
 
 }
