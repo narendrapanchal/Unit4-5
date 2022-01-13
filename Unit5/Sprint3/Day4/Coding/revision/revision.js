@@ -3,9 +3,9 @@ const incermentCount= {type:"INCREMENT",payload:1};
 const decermentCount= {type:"DECREMENT",payload:1};
 const addTodo={type:"ADDTODO",payload:{name:"narendra",age:21}};
 class Store{
-    constructor(reducer,init){
+    constructor(reducer,satte){
         this.reducer=reducer;
-        this.state=init;
+        this.state=satte;
     }
     getState(){
         return this.state;
@@ -17,22 +17,23 @@ class Store{
 }
 const reducer=(state,{type,payload})=>{
     switch(type){
-        case"INCREMENT":
+        case "INCREMENT":
         return {...state,count:state.count+payload};
-        case"DECREMENT":
+        case "DECREMENT":
         return {...state,count:state.count-payload};
-        case"ADDTODO":
-        return{...state,todo:[...state.todo, payload]};
+        case "ADDTODO":
+        return {...state,todo:[...state.todo, payload]};
         default:
         return state;
     }
 };
-const init={count:1,todo:[]};
-const store=new Store(reducer,init);
+const satte={count:1,todo:[]};
+const store=new Store(reducer,satte);
 console.log(store.state);
 store.dispatch(incermentCount);
 console.log(store.state);
 store.dispatch(decermentCount);
 console.log(store.state);
+store.dispatch(addTodo);
 store.dispatch(addTodo);
 console.log(store.state);
