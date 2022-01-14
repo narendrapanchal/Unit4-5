@@ -1,0 +1,44 @@
+{
+  "todos": [
+    {
+      "status": true,
+      "title": "helo ji",
+      "id": 5
+    },
+    {
+      "status": true,
+      "title": "panhal",
+      "id": 6
+    },
+    {
+      "status": true,
+      "title": "qwew",
+      "id": 8
+    },
+    {
+      "status": true,
+      "title": "qewre",
+      "id": 12
+    },
+    {
+      "status": false,
+      "title": "qewr",
+      "id": 13
+    },
+    {
+      "status": false,
+      "title": "fghjk",
+      "id": 14
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

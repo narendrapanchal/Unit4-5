@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .modal_wrapper{
+           position: fixed;
+           left: 0;
+           right: 0;
+           background: rgb(0, .0, .0,.0.6);
+           height: 100%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           opacity: 0;
+           pointer-events: none;
+           transition: all 0.9s ease-in-out;
+        }
+        .modal_container{
+            background: #fff;
+            width: 560px;
+            max-width: 90%;
+            padding: 20px;
+            border-radius: 4px;
+            position: relative;
+            transform: translateY(-100%);
+            transition: all .3s ease-in-out;
+        }
+        .btn_purple{
+            background: #6B46C1;
+            padding: 10px 40px;
+            color: #fff;
+            border-radius:10px ;
+            cursor: pointer;
+        }
+        h2{
+            margin-bottom: 10px;
+
+        }
+        p{
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .action{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .modal_container button.close{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 32px;
+            background:none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .modal_container button.close:hover{
+            color: #6B46C1;
+        }
+        .active{
+            opacity: 1;
+            pointer-events: auto;
+            
+        }
+        .modal_wrapper.active .modal_container{
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn_purple" id="trigger">login</button>
+    <div class="modal_wrapper">
+        <div class="modal_container">
+            <button class="close">&times;</button>
+            <h2>Login</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quisquam asperiores, tempora, vel cum sunt quae qui maiores facere eveniet itaque voluptate delectus voluptates, ullam quis sequi. Doloremque, labore tempora.</p>
+        <div class="action">
+            <button class="btn_purple">Login</button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    const closebtn=document.querySelector(".close");
+    const trigger=document.querySelector("#trigger");
+    const modal_wrapper=document.querySelector(".modal_wrapper");
+    trigger.addEventListener("click",function(){
+        modal_wrapper.classList.add("active")
+    })
+    closebtn.addEventListener("click",function(){
+        modal_wrapper.classList.remove("active")
+    })
+    modal_wrapper.addEventListener("click",function(e){
+        if(e.target!==this)
+        return
+        modal_wrapper.classList.remove("active")
+    })
+</script>

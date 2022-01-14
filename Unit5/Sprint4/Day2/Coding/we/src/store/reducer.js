@@ -20,8 +20,7 @@ switch(type){
     case REMOVE_TODO:
         return (()=>{
             state.todos.filter((data)=>{
-                return data!=payload;
-            })
+                return data!=payload;})
             return {...state};
         })   
         case REMOVE_TODO:
