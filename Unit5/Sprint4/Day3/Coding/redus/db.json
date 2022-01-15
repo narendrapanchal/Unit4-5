@@ -1,0 +1,39 @@
+{
+  "todos": [
+    {
+      "status": true,
+      "title": "ghjhbkjn",
+      "id": 12
+    },
+    {
+      "status": true,
+      "title": "qewr",
+      "id": 13
+    },
+    {
+      "status": false,
+      "title": "fghjk",
+      "id": 14
+    },
+    {
+      "status": false,
+      "title": "qeweq",
+      "id": 15
+    },
+    {
+      "status": false,
+      "title": "dgfhj",
+      "id": 16
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

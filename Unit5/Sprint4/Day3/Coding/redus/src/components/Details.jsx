@@ -1,15 +1,15 @@
 import {useDispatch, useSelector} from "react-redux"
 import { useParams } from "react-router-dom";
 import { useState,useEffect } from "react";
-import { getTodoError,getTodoLoading,getTodoSuccess } from "../store/action";
+import { getTodoError,getTodoLoading,getTodoSuccess } from "../reducers/todo/action";
 export const Details=()=>{
     const [text,setText] = useState("");
     const dispatch=useDispatch();
     const {id} =useParams();
     const {loading,todos,error}=useSelector((state)=>({
-        loading:state.loading,
-        todos:state.todos,
-        error:state.error
+        loading:state.todoReducer.loading,
+        todos:state.todoReducer.todos,
+        error:state.todoReducer.error
     }));
     useEffect(()=>{
         apidata();
