@@ -7,8 +7,9 @@ export const AddJob=()=>{
     let [description,setDescription]=useState("");
     let [location,setLocation]=useState("");
     let [type,setType]=useState("");
-    let adminConfirm=JSON.parse(location.getItem("token"))
-   
+    let adminConfirm=JSON.parse(localStorage.getItem("token"))
+   if(!adminConfirm.admin)
+   return <Navigate to={"/login"}/>
     return (<div>
         <input type="text" placeholder="Company Name" onChange={(e)=>{
             setCompany(e.target.value);

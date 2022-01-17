@@ -1,6 +1,34 @@
 {
   "joblist": [
-    
+    {
+      "company": "Masai",
+      "title": "Developer",
+      "salary": "20000",
+      "description": "Descripiton",
+      "location": "Bang",
+      "type": "full time",
+      "id": 1
+    },
+    {
+      "company": "Masai",
+      "title": "Developer",
+      "salary": "20000",
+      "description": "Descripiton",
+      "location": "Bang",
+      "type": "full time",
+      "id": 2
+    }
+  ],
+  "Applied": [
+    {
+      "company": "Masai",
+      "title": "Developer",
+      "salary": "20000",
+      "description": "Descripiton",
+      "location": "Bang",
+      "type": "full time",
+      "id": 1
+    }
   ],
   "comments": [
     {
