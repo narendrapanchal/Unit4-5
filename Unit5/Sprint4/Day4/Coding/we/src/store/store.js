@@ -14,6 +14,8 @@ let rootReducer=combineReducers({
 //     next(action);
 //     console.log(" exit logger 1");
 // }
-
+/**
+ * Always write thuhk first 
+ */
 export const store=createStore(rootReducer,compose(applyMiddleware(thunk),window.__REDUX_DEVTOOLS_EXTENSION__()));
 console.log(store.getState());
