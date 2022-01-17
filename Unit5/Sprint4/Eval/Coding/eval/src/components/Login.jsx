@@ -1,5 +1,4 @@
 import { useState } from "react"
-import {saveData} from "../utils/loacalStorage";
 export const Login=()=>{
     let [userName,setUserName]=useState("");
     let [password,setPassword]=useState("");
@@ -8,15 +7,24 @@ export const Login=()=>{
         <input type="text" placeholder="Enter Username" onChange={(e)=>{
             setUserName(e.target.value);
         }} />
+        <br />
         <input type="text" placeholder="Enter Password" onChange={(e)=>{
             setPassword(e.target.value);
         }} />
-        <Label>Admin</Label>
-        <checkbox onChange={()=>{
+        <br />
+        <span>Admin &nbsp;</span>
+        <input type="checkbox" onChange={()=>{
             setAdmin((prev)=>(!prev));
-        }}></checkbox>
+        }}/>
+        
+        <br />
         <button onClick={()=>{
-            
+            let form ={
+                userName,
+                password,
+                admin
+            }
+            localStorage.setItem("token",JSON.stringify(form));
         }} >Login</button>
     </div>)
 }

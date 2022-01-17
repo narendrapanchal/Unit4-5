@@ -1,8 +1,7 @@
 import { useState } from "react"
-
 export const JobList=()=>{
     let [data,setData]=useState([]);
-    fetch("http://localhost:30001/joblist").then((temp)=>temp.json()).then((temp)=>{
+    fetch("http://localhost:3001/joblist").then((temp)=>temp.json()).then((temp)=>{
         setData(temp);
     }).catch((e)=>{
         console.log(e);

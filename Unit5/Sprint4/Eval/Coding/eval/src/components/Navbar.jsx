@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom"
+import "../App.css"
 export const Navbar=()=>{
-    <div>
+  return  ( <div className="navbar">
             <Link to="/" >Job List</Link>
             <Link to="/login" >Login</Link>
-            <Link to="/add" > Add Job</Link>
-    </div>
+            <Link to="/addjob" > Add Job</Link>
+    </div>)
 }
