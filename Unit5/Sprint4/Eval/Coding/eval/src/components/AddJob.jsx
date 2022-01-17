@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Navigate } from "react-router-dom";
 export const AddJob=()=>{
+  
     let [company,setCompany]=useState("");
     let [title,setTitle]=useState("");
     let [salary,setSalary]=useState(100000);

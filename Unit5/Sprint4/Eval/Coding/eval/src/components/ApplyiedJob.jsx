@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react"
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { dataAction } from "../reducers/action";
 export const AppliedList=()=>{
-    let [data,setData]=useState([]);
+    const dispatch=useDispatch();
+    const {data} =useSelector((state)=>({data:state.data}))
+
    useEffect(()=>{
 showData();
    },[]);
    
    async function showData(){ 
       try{
-        let data=await fetch("http://localhost:3001/applied").then((temp)=>temp.json())
-        setData(data);
-        console.log(data)
+        let temp=await fetch("http://localhost:3001/applied").then((temp)=>temp.json())
+        dispatch(dataAction(temp))
+        console.log(temp)
         
       }catch(e){
           console.log(e);
