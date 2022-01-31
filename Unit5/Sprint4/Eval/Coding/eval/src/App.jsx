@@ -10,7 +10,7 @@ import {AppliedList} from "./components/ApplyiedJob";
 function App() {
   return (
     <div className="App">
-      <div>Hi</div>
+    
      <Navbar/>
      <Routes>
        <Route path="/" element={  <PrivateRoute><JobList/></PrivateRoute>}>

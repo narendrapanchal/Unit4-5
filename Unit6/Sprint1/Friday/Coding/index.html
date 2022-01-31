@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//s.imgur.com/images/favicon-32x32.png">
+    <title> Imgur: The magic of the Internet</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap');
+    </style>
+    <style>
+        body {
+            background-color: #2E3035;
+        }
+
+        #navbar {
+            display: grid;
+            direction: row;
+            background-color: #191747;
+            grid-template-columns: 19% 40% 21%;
+            gap: 10%;
+            padding: 10px;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            position: fixed;
+        }
+
+        #navbar>div>img {
+            height: 30px;
+        }
+
+        #navbar>div:nth-child(1)>div {
+            background-color: #31BE7C;
+        }
+
+        #navbar>div:nth-child(1) {
+            display: flex;
+            color: white;
+            font-family: 'Rubik', sans-serif;
+
+        }
+
+        #navbar>div:nth-child(1)>div>div:nth-child(1) {
+            padding-top: 2px;
+
+        }
+
+        #addnew {
+            display: flex;
+            padding: 4px;
+            border-radius: 5px;
+        }
+
+        #addnew>div:nth-child(2) {
+            font-family: 'Rubik', sans-serif;
+            font-size: 13px;
+            margin: 3px 10px 3px 10px;
+        }
+
+        input {
+            height: 30px;
+            background-color: #454469;
+            border: none;
+            color: white;
+            padding-left: 20px;
+            width: 85%;
+            margin-left: 10px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        #navbar>div:nth-child(2) {
+            background-color: #454469;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 10px;
+            border-radius: 10px;
+        }
+
+        #navbar>div:nth-child(2)>div>ion-icon {
+            margin-top: 5px;
+            color: white;
+        }
+
+        #navbar>div>div>div {
+            padding-top: 1px;
+        }
+
+        #last-div {
+            justify-content: end;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        #last-div div {
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 14px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        #data {
+            width: 80%;
+            margin: auto;
+            margin-top: 100px;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="navbar">
+        <div>
+            <img id="imgurimage" src="./th-removebg-preview.png" alt="">&nbsp; &nbsp;&nbsp;
+            <div id="addnew">
+                <div><img
+                        src="https://s.imgur.com/desktop-assets/desktop-assets/icon-new-post.13ab64f9f36ad8f25ae3544b350e2ae1.svg">
+                </div>
+                <div style="font-size: 14px;">New post</div>
+            </div>
+        </div>
+        <div><input type="text" placeholder="Images, #tags, @users oh my!" />
+            <div>
+                <ion-icon style="height: 20px; width: 20px;" name="search"></ion-icon>
+            </div>
+        </div>
+        <div style="  display: flex;" id="last-div">
+            <div>
+                <ion-icon style="height: 15px; width: 15px;" name="bookmark-outline"></ion-icon>
+            </div>
+            <div style="background-color: #3075ec;">Go Ad-Free</div>
+            <div>Sign in</div>
+            <div style="background-color: #31BE7C;">Sign up</div>
+        </div>
+    </div>
+    <div id="data">
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+<script>
+    let globdata;
+    fetch("https://serpapi.com/search.json?q=Tom+Hanks&device=mobile&hl=en&gl=us&api_key=b567af3a632a084f861405f6079590a167a9dbf3d49ac00a100fd6faaa3fdf7b").then((e) => (e.json()))
+        .then(data => {
+            console.log(data.top_stories, data.inline_videos);
+            let div = document.getElementById("data");
+            globdata = data.top_stories.carousel;
+            data.top_stories.carousel.forEach((e) => {
+                let img = document.createElement("img");
+                let indiv = document.createElement("div");
+                img.style.width = "300px"
+                img.src = e.thumbnail
+                indiv.append(img)
+                indiv.style.backgroundColor="#67686F";
+                let h3 = document.createElement("h3");
+                h3.textContent="Fast Car";
+                indiv.append(h3);
+                h3.style.marginLeft="20px"
+                h3.style.color="white"
+                div.append(indiv);
+
+            })
+
+        })
+        .catch((e) => {
+            console.log(e, e.message);
+        })
+
+    window.addEventListener(`scroll`, () => {
+        if (window.scrollY + window.innerHeight + 1>= document.documentElement.scrollHeight) {
+            fetch("https://serpapi.com/search.json?q=Tom+Hanks&device=mobile&hl=en&gl=us&api_key=b567af3a632a084f861405f6079590a167a9dbf3d49ac00a100fd6faaa3fdf7b").then((e) => (e.json()))
+            .then(data => {
+            console.log(data.top_stories, data.inline_videos);
+            let div = document.getElementById("data");
+            globdata = data.top_stories.carousel;
+            data.top_stories.carousel.forEach((e) => {
+                let img = document.createElement("img");
+                let indiv = document.createElement("div");
+                img.style.width = "300px"
+                img.src = e.thumbnail
+                indiv.append(img)
+                indiv.style.backgroundColor="#67686F";
+                let h3 = document.createElement("h3");
+                h3.textContent="Fast Car";
+                indiv.append(h3);
+                h3.style.marginLeft="20px"
+                h3.style.color="white"
+                div.append(indiv);
+
+            })
+
+        })
+                .catch((e) => {
+                    console.log(e, e.message);
+                })
+        }
+    })
+</script>
