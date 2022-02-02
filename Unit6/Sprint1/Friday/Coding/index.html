@@ -161,7 +161,9 @@
             console.log(data.top_stories, data.inline_videos);
             let div = document.getElementById("data");
             globdata = data.top_stories.carousel;
-            data.top_stories.carousel.forEach((e) => {
+            data.top_stories.carousel.forEach((e,i) => {
+                if(i==3)
+                return
                 let img = document.createElement("img");
                 let indiv = document.createElement("div");
                 img.style.width = "300px"
@@ -189,7 +191,9 @@
             console.log(data.top_stories, data.inline_videos);
             let div = document.getElementById("data");
             globdata = data.top_stories.carousel;
-            data.top_stories.carousel.forEach((e) => {
+            data.top_stories.carousel.forEach((e,i) => {
+                if(i==3)
+                return
                 let img = document.createElement("img");
                 let indiv = document.createElement("div");
                 img.style.width = "300px"

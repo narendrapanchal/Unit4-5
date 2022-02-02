@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 500px;
+            width: 50%;
+            margin: auto;
+            overflow-y: auto;
+            background-color: #454469;
+        }
+    </style>
+</head>
+<body>
+    <div id="data"></div>
+</body>
+</html>
+<script>
+     var globdata=1;
+     var div=document.getElementById("data");
+                for(let i=1;i<=25;i++){
+                    let h3 = document.createElement("h3");
+                    h3.textContent=`masai student ${globdata++}`;
+                h3.style.marginLeft="20px"
+                h3.style.color="white"
+                div.append(h3);
+                }
+               
+
+   
+
+    div.addEventListener(`scroll`, () => {
+    console.log(div.scrollTop,div.scrollHeight,document.documentElement.scrollHeight);
+    if(div.scrollTop-180+document.documentElement.scrollHeight>=div.scrollHeight)
+        for(let i=1;i<=25;i++){
+                    let h3 = document.createElement("h3");
+                    h3.textContent=`masai student ${globdata++}`;
+                h3.style.marginLeft="20px"
+                h3.style.color="white"
+                div.append(h3);
+                }
+               
+    });
+
+</script>
