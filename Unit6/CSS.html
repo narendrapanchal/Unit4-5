@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      div{
+          display: grid;
+          grid-template-columns: 30% 30% 30%;
+          grid-gap: 5%;
+      }
+        div{
+            border: 1px dashed green;
+        }
+        div{
+            border: 1px dashed black;
+        }
+        div {
+            color:  red;
+        } 
+        div + h1{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div >
+    <h1>heading </h1>
+    <h4>heading4 </h4>
+    <h2>heading 2</h2>
+    <h3>heading 3</h3>
+    </div>
+
+    <h1 >Harr</h1>
+    <img src="https://static.vecteezy.com/packs/media/components/global/search-explore-nav/img/vectors/term-bg-1-666de2d941529c25aa511dc18d727160.jpg" alt="ahflk">  
+</body>
+</html>
+<script>
+// constructer
+// class Gender{
+//     constructor(gender){
+//         var temp={};
+//         temp.gender=gender;
+//         return temp
+//     }
+// }
+// var gender=new Gender("M");
+// console.log(gender);
+// class Person extends Gender{
+//      constructor(gender,name,age){
+//          super(gender);
+//          this.name=name;
+//          this.age=age;
+//      }
+// }
+// var person=new Person("M","Narednra",21);
+// console.log(person)
+function mutateObj(obj) {
+  obj.key = 'newValue'
+  return obj
+}
+
+const param = { key: 'originalValue' }
+const returnVal = mutateObj(param)
+console.log(param == returnVal);
+</script>

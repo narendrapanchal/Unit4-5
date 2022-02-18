@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Form } from "./Form";
 export const Todo=()=>{
     const [todo,setTodo]=useState([]);
-    const [page,setPage]=useState(1);
+    const check=useRef(false);
+    const [page,setPage]=useState(1);// useRef  useEffect
+    useEffect(()=>{
+
+    })
     useEffect(()=>{
         getTodo()
         },[])

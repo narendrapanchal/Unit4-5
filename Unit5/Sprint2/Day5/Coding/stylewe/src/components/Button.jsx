@@ -17,7 +17,7 @@ background-color:White;
 export const Div = styled.div`
 // css syntax
 display:flex;
-justify-content:centre;
+justify-content:center;
 color:coral;
 width:200px;
 height:400px;
