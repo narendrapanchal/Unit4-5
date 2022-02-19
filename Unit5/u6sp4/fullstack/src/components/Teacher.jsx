@@ -9,7 +9,8 @@ export const Teacher=()=>{
     Navigate("/teacher");
     let [data,setData]=useState([]);
    async function getData(){
-       console.log(queryParams)
+    queryParams = queryString.parse(window.location.search);
+    console.log(window.location.search)
         await fetch("http://localhost:12345/teachers").then((res)=>res.json()).then((res)=>{
             if(queryParams.gender!=null){
                 if(queryParams.gender=="m")

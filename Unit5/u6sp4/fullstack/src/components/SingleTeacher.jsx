@@ -10,8 +10,9 @@ export const SingleTeacher=()=>{
                 return el._id==queryParams._id
             })
            setData(res);
-           if(res.length){
-            getClass(res.classes);
+           if(res.length>0){
+               
+            getClass(res[0].classes);
            }
     }).catch((err)=>{
         console.log(err);
@@ -22,14 +23,17 @@ export const SingleTeacher=()=>{
             return res.json();
         }).then((res)=>{
             let temp=[];
+          
             for(let i=0;i<arr.length;i++){
                 res.forEach((el)=>{
-                    if(el._id==arr._id){
+                    if(el._id==arr[i]){
                         temp.push(el);
                     }
                 })
             }
+            console.log(temp)
             setAllClasses(temp);
+            console.log(allClasses);
         }).catch((err)=>{console.log(err)});
     }
     useEffect(()=>{
@@ -47,7 +51,7 @@ export const SingleTeacher=()=>{
         }
         {
             allClasses.map((el)=>{
-                return <h1 key={el._id}>{el.grade} {el.subject} {el.section}</h1>
+                return <h1 key={el._id}> Grade {el.grade} Subject {el.subject} Section {el.section}</h1>
             })
         }
     </div>
