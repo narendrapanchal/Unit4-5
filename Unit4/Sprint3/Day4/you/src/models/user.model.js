@@ -25,3 +25,4 @@ userSchema.methods.checkPassword = function (password) {
     });
   };
   module.exports =model('user',userSchema);
+  // https://www.npmjs.com/package/bcrypt

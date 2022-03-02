@@ -21,8 +21,6 @@ router.post("",upload.single("image"), async (req, res) => {
     try {
       let page=+req.query.page || 1;
       let size=+req.query.size || 3;
-     
-      
       let offset=(page-1)*size;
       const users = await User.find().skip(offset).limit(size).lean().exec();
       const total_pages=Math.ceil((await User.find().countDocuments())/size);

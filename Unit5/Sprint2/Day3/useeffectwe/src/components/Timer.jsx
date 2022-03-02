@@ -20,7 +20,7 @@ export const Timer=()=>{
        setTime({...time,[name] : value})
     }
     function startTimer(e){
-        e.preventDefault
+        e.preventDefault();
         setCounter(start)
     }
     return <div>

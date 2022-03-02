@@ -12,17 +12,17 @@ export const Form=()=>{
             // if(temp)
             // clearInterval(id);
             setStart((prev)=>
-           {
+             {
             console.log(prev)
                if(prev>=end){
                    clearInterval(id.current);
                    id.current=null
                    return prev
-               }else{
+                 }else{
                    return prev+=1;
                }
-           
-           }
+            
+            }
        );
 
        },1000);

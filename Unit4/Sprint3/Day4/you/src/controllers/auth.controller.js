@@ -19,7 +19,7 @@ const register = async (req, res) => {
     if (user)
       return res.status(400).json({
         status: "failed",
-        message: " Please provide a different email address",
+        message: " Please provide a different email address user Already exist",
       });
 
     // else we will create the user we will hash the password as plain text password is harmful
@@ -62,6 +62,7 @@ const login = async (req, res) => {
 
     // if it matches then create the token
     const token = newToken(user);
+    
     console.log(user)
     // return the user and the token
     res.status(201).json({ user, token });

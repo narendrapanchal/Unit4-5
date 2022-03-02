@@ -71,36 +71,56 @@
 // console.log(n);
 // }
 // superdigit(186);
-function decipher(n,str){
-  n=str.length;
-  let mystr="";
-  let arr=[];
-  let num="";
-  let obj={}
-  let atoz="qwertyuiopasdfghjklzxcvbnm";
-  for(let i=0;i<26;i++){
-    obj[atoz[i]]=1;
-  }
-  for(let i=0;i<n.length;i++){
-    if(obj[str[i]]==null){
-      num+=str[i];
-    }else{
-      arr.push(Number(num));
-      num="";
-      mystr+=str[i];
-    }
-  }
+// function decipher(n,str){
+//   n=str.length;
+//   let mystr="";
+//   let arr=[];
+//   let num="";
+//   let obj={}
+//   let atoz="qwertyuiopasdfghjklzxcvbnm";
+//   for(let i=0;i<26;i++){
+//     obj[atoz[i]]=1;
+//   }
+//   for(let i=0;i<n.length;i++){
+//     if(obj[str[i]]==null){
+//       num+=str[i];
+//     }else{
+//       arr.push(Number(num));
+//       num="";
+//       mystr+=str[i];
+//     }
+//   }
 
-  arr.push(Number(num));
-  let out=""
-  console.log(mystr,arr);
-  for(let i=0;i<mystr.length;i++){
-    for(let j=0;j<arr[i];j++){
-    out+=mystr[i];
-    }
-  }
-  console.log(out);
+//   arr.push(Number(num));
+//   let out=""
+//   console.log(mystr,arr);
+//   for(let i=0;i<mystr.length;i++){
+//     for(let j=0;j<arr[i];j++){
+//     out+=mystr[i];
+//     }
+//   }
+//   console.log(out);
+// }
+// decipher(6, "a2b1c2");
+
+
+// async function mydata(){
+//   data= await axios.get(`https://jsonmock.hackerrank.com/api/article_users?page=1`).then((res)=>{
+//     console.log(res);
+//   }).catch((err)=>{
+//     console.log(err);
+//   }).then(function(res){
+//     console.log(res);
+//   });
+// }
+// mydata();
+async function print(data){
+  await setTimeout(function(){
+    console.log(data) 
+   },1000*data)
+   
+   
 }
-decipher(6, "a2b1c2");
-
-
+[1,2,3,4].forEach(async(data)=>{
+   await print(data);
+})

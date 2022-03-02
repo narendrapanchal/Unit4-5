@@ -19,7 +19,7 @@ case GET_TODO_LOADING:
 case GET_TODO_ERROR:
     return {...state,loading:false,error:true}  
 case REMOVE_TODO:
-    return {...state,todos:payload};          
+    return {...state,todos:payload};
 default:
     return state;
 }

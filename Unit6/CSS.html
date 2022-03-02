@@ -5,34 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
-      div{
-          display: grid;
-          grid-template-columns: 30% 30% 30%;
-          grid-gap: 5%;
+      /* body,html {
+          margin: 0;
+          padding: 0;
+        display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: center;
       }
         div{
             border: 1px dashed green;
+            background:green;
+            width:300px;
+            align-self: center;
+            justify-self: center;
+ 
         }
-        div{
-            border: 1px dashed black;
-        }
-        div {
-            color:  red;
-        } 
-        div + h1{
-            color: blueviolet;
-        }
+        *{
+            border: 1px dashed red;
+            align-self: center;
+        } */
+      
+       
     </style>
 </head>
 <body>
+  <marquee behavior="flex" direction="right">narednra</marquee>
     <div >
-    <h1>heading </h1>
-    <h4>heading4 </h4>
-    <h2>heading 2</h2>
-    <h3>heading 3</h3>
+    <h2>heag </h2>
+    <h2 >head2 </h2>
+    <h2 style="position: relative;top: 0;left: 0;bottom:0;right:10">heading 3</h2>
+    <h2>heading 4</h2>
     </div>
-
+</br>
     <h1 >Harr</h1>
     <img src="https://static.vecteezy.com/packs/media/components/global/search-explore-nav/img/vectors/term-bg-1-666de2d941529c25aa511dc18d727160.jpg" alt="ahflk">  
 </body>
@@ -57,12 +64,103 @@
 // }
 // var person=new Person("M","Narednra",21);
 // console.log(person)
-function mutateObj(obj) {
-  obj.key = 'newValue'
-  return obj
-}
+// function mutateObj(obj) {
+//   obj.key = 'newValue'
+//   return obj
+// }
 
-const param = { key: 'originalValue' }
-const returnVal = mutateObj(param)
-console.log(param == returnVal);
-</script>
+// const param = { key: 'originalValue' }
+// const returnVal = mutateObj(param)
+// console.log(param == returnVal);
+// function alppha(){
+//     x:100,
+//     this.beta();
+// }
+// function beta(){var x=200
+// console.log(this.x);
+// }
+// alppha();
+// (function(){
+// console.log("helllo")
+// }())
+// function name(){
+//     if(true){
+//         const kam="dsa";
+//     }
+//     console.log(kam);
+// }
+// name();
+// function aloha(a,s){
+//   a=a||12;
+//   s=s||12
+//     console.log(s+a);
+// }
+
+// var name="smasndjan";
+// aloha(0,12);
+// setTimeout(() => {
+//     console.log('timeout');
+//   },10);
+//   setImmediate(() => {
+//     console.log('immediate');
+//   },10);
+
+
+
+// three();
+// async function find(threshold){
+//     let  data1= await axios.get(`https://jsonmock.hackerrank.com/api/article_users?page=1`);
+//     let ans1=await data1.data.data;
+//     let  data2= await axios.get(`https://jsonmock.hackerrank.com/api/article_users?page=2`);
+//     let ans2=await data2.data.data;
+//     let ans = await [...ans1 , ...ans2];
+//     let res =  ans.map( (ele)=>{
+      
+//       return ele.username;
+//     })
+//   // Promise.all(res).then(function(ele){
+//   //   console.log(ele)
+//   //   return ele
+//   // })
+//    console.log(res)
+//    return res;
+//  }
+// console.log(find(14))
+
+async function threshold(threshoeder){
+  let glob= await find(1,0);
+  async function find(page,total){
+  let  data=  await axios.get(`https://jsonmock.hackerrank.com/api/article_users`);
+  let temp =await  data.data.data;
+   temp=temp.map((ele)=>{
+    return ele.username
+  })
+  if(total+temp.length<threshoeder){
+    let tempData=await find(find(page+1,total+temp.length))
+    temp=[...temp,...tempData];
+  }
+  return temp
+}
+let data=[];
+for(let i=0;i<threshoeder;i++){
+  data.push(glob[i]);
+}
+return data
+}
+  async function three(){
+     let data=await threshold(14);
+     console.log(data.join("\n"));
+  }
+three();
+//  function numbe(data){
+//   let tem=  setTimeout(function(){
+//     console.log(data);
+//     return data;
+//   },1000*data);
+//   return tem; 
+//  }
+// [1,2,3,4].forEach(async(e)=>{
+//   let data=await numbe(e);
+
+// })
+ </script>

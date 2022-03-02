@@ -33,7 +33,7 @@ export const Login=()=>{
         })
         .then((res)=>{
             localStorage.setItem("token",JSON.stringify(res));
-            
+            Navigate("/teacher");
             console.log(res,"Hi");//eve.holt@reqres.in  cityslicka
         })
         .catch((err)=>{
@@ -42,7 +42,8 @@ export const Login=()=>{
         });
     }
     return (<div> <input id="email" type="email" placeholder="Email" />
-    <input placeholder="Password" id="password" type="password"/> <button onClick={()=>{
+    <input placeholder="Password" id="password" type="password"/>
+     <button onClick={()=>{
         loginuser();
     }}>Login</button>
     

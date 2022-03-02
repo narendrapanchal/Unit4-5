@@ -18,8 +18,6 @@ router.post("", async (req, res) => {
     try {
       let page=+req.query.page || 1;
       let size=+req.query.size || 3;
-     
-      
       let offset=(page-1)*size;
       console.log(page,size,offset);
       const users = await User.find().skip(offset).limit(size).lean().exec();
