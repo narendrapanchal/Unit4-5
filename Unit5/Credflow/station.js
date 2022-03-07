@@ -1,3 +1,7 @@
+    let arrive = [940,900, 950, 1100, 1500, 1800];
+    let depart = [1200, 910, 1120, 1130, 1900, 2000];
+    let n = arrive.length;
+    console.log(" Required Minimum Number of Platforms are " + findPlatform(arrive, depart, n));
     function findPlatform(arrive, depart, n){
      // combining data or arrival time and departure time
     let mat=arrive.map((ele,i)=>([ele,depart[i]])); 
