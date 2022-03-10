@@ -3,6 +3,7 @@ import './App.css';
 import {Navbar} from './components/Navbar/Navbar';
 import {Body} from './components/Body/Body';
 import {Shop} from './components/Shop/Shop';
+import {Payment} from './components/Payment/Payment';
 import {Cart} from './components/Cart/Cart';
 import {Filter} from './components/Filter/Filter';
 import {Routes,Route} from "react-router-dom";
@@ -18,6 +19,8 @@ function App() {
        <Route path="/shop" element={<Shop/>}>
        </Route>
        <Route path="/cart" element={<Cart/>}>
+       </Route>
+       <Route path="/payment" element={<Payment/>}>
        </Route>
       </Routes>
     </div>

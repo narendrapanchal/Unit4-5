@@ -1,0 +1,7 @@
+input{
+    color: white;background-color:green
+}
+#signup{
+    display: flex;
+    justify-content: center;
+}

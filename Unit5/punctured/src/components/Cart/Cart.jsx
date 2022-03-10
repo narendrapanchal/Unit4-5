@@ -26,7 +26,7 @@ export const Cart=()=>{
         {data.length?"":<div><b>No data Found</b></div>}
     </div>
     <button onClick={()=>{
-        Navigate("checkout")
+        Navigate("/payment")
     }}>Checkout</button>
    </div>)
 }
