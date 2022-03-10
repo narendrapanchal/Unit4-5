@@ -57,7 +57,7 @@ export const Filter=()=>{
         <br />
         <div>
            Minumum Discounts
-            <label for="points">Filter by discount:</label>
+            <label >Filter by discount:</label>
             <br />
             <input type="range"  name="points" min="0" onChange={(e)=>{
              document.getElementById("discountrange").textContent=e.target.value;
