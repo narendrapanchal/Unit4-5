@@ -1,0 +1,80 @@
+/* .imageurl{
+    background-image: url(https://www.fixmycycle.com/images/cycle1.png);
+   min-height:300px;
+   background-size: cover;
+   repeat: no-repeat;
+}
+@media  only screen and (min-width: 300px) {
+    .imageurl{
+        width:70%;
+        margin: auto;
+        min-height: 600px;
+    }
+} */
+/* #body{
+    margin-top:20px
+} */
+#welcome{
+    margin: auto;
+    text-align: center;
+    color:#0E185F;
+    font-weight:bold;
+    font-size:20px
+}
+span{
+    color:#9ee230;
+}
+#welcomeimage{
+    width:30%;
+    height: 300px;
+}
+#filters{
+   display:flex;
+   justify-content:right
+}
+#filters > div{
+    margin-right: 40px;
+}
+.data > div > div{
+    display:flex;
+    justify-content:space-between
+}
+.data > div > div > div{
+    margin-right :55px;
+    margin-left: 55px;
+}
+
+.data> div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top:30px;
+    padding-bottom: 20px;
+    margin: 10px;
+}
+.data> div:hover{ 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 45px;
+}
+.data >div>  img{
+    height:300px; 
+    width:300px;       
+}
+@media  only screen and (min-width: 1050px) {
+    .data{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        
+    }
+}
+@media  only screen and (max-width: 1050px) {
+    
+    .data{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+} 
+@media  only screen and (max-width: 800px) {
+  
+    .data{
+        display: flex;
+        flex-direction: column;
+    }
+} 

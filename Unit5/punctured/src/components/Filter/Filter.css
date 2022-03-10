@@ -1,0 +1,25 @@
+ion-icon{
+    color:#0E185F;
+}
+span{
+    color:#0E185F;
+}
+#allfilter{
+    font-size:20px;
+    padding:10px
+}
+button{
+    font-size:20px;
+    background-color:#0E185F;
+    color: white;
+    padding:10px;
+    padding-left: 30px;
+    padding-right:30px;
+    border-radius: 30px;
+
+}
+input{
+    height:20px;
+    color:#0E185F;
+    background-color:#0E185F;
+}

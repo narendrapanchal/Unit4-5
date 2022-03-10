@@ -1,104 +1,14 @@
 {
   "users": [
     {
-      "username": "qw",
-      "age": "21",
-      "address": "qw",
+      "username": "narendrapanchalk",
+      "age": "6",
+      "address": "21",
       "depart": false,
       "salary": 0,
       "married": false,
-      "photo": "",
-      "id": 7
-    },
-    {
-      "username": "qw",
-      "age": "",
-      "address": "",
-      "depart": false,
-      "salary": 0,
-      "married": false,
-      "photo": "",
-      "id": 8
-    },
-    {
-      "username": "qw",
-      "age": "21",
-      "address": "",
-      "depart": false,
-      "salary": 0,
-      "married": false,
-      "photo": "",
-      "id": 9
-    },
-    {
-      "username": "qw",
-      "age": "21",
-      "address": "",
-      "depart": false,
-      "salary": 0,
-      "married": false,
-      "photo": "",
-      "id": 10
-    },
-    {
-      "username": "qw",
-      "age": "21",
-      "address": "",
-      "depart": false,
-      "salary": 0,
-      "married": false,
-      "photo": "",
-      "id": 11
-    },
-    {
-      "username": "qw",
-      "age": "21",
-      "address": "",
-      "depart": false,
-      "salary": 0,
-      "married": false,
-      "photo": "",
-      "id": 12
-    },
-    {
-      "username": "qw",
-      "age": "21",
-      "address": "",
-      "depart": false,
-      "salary": 0,
-      "married": false,
-      "photo": "",
-      "id": 13
-    },
-    {
-      "username": "qw",
-      "age": "21",
-      "address": "",
-      "depart": false,
-      "salary": 0,
-      "married": false,
-      "photo": "",
-      "id": 14
-    },
-    {
-      "username": "qw",
-      "age": "21",
-      "address": "",
-      "depart": false,
-      "salary": 0,
-      "married": false,
-      "photo": "",
-      "id": 15
-    },
-    {
-      "username": "qw",
-      "age": "21",
-      "address": "",
-      "depart": false,
-      "salary": 0,
-      "married": false,
-      "photo": "",
-      "id": 16
+      "photo": "21",
+      "id": 1
     }
   ],
   "comments": [

@@ -1,0 +1,23 @@
+.header{
+    display:flex;
+    justify-content:space-between;
+    background-color:#0E185F;
+    color:white;
+    margin: 0;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+.header > div{
+    margin: 10px;
+}
+select{
+    outline:none;
+    background-color:#0E185F;
+    color:white;
+    border: none;
+}
+span{
+    color:#9ee230;
+}

@@ -5,13 +5,14 @@ export const Todo=()=>{
     const check=useRef(false);
     const [page,setPage]=useState(1);// useRef  useEffect
     useEffect(()=>{
-
+console.log("Secoind");
     })
     useEffect(()=>{
         getTodo()
+        console.log("third");
         },[])
     useEffect(()=>{
-    getTodo()
+    console.log("Fourth")
     },[page])
     const getTodo=()=>{
         fetch(`http://localhost:3001/users?_page=${page}&_limit=5`)
@@ -31,6 +32,7 @@ export const Todo=()=>{
                 "content-type":"application/json",
             }
         })
+        console.log("mysecond")
             getTodo();
     }
     const  deletekaro =(id)=>{
@@ -41,16 +43,20 @@ export const Todo=()=>{
         "Content-Type":"application/json"
     },
     })
-    getTodo();
+    console.log("mysecond")
+  
 }
+console.log("firsts")
     return(
         <div>
            
             <Form getData={changehappen} ></Form>
             {
                 todo.map((e,i)=>
-                   ( <div key={i}> {e.username} {e.id} <button onClick={()=>{
-                       deletekaro(e.id);
+                   ( <div key={i}> {e.username} {e.id} <button onClick={async()=>{
+                    let temp=  await deletekaro(e.id);
+                       getTodo()
+
                    }}>Delete</button></div>)
                 )
             }

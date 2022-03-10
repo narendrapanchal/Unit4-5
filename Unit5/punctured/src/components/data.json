@@ -1,0 +1,90 @@
+[
+    {    "name":"Power Sport",
+        "distance":10, 
+        "rating":2,
+        "online":false, 
+        "discount":15,
+        "image":"https://honeyguideapps.com/sites/default/files/POwersports.jpg"
+    },
+    {    "name":"FullCity 2",
+        "distance":10, 
+        "rating":2,
+        "online":true, 
+        "discount":21,
+        "image":"https://c8.alamy.com/comp/PKD8Y2/fullcity-cycles-bicycle-sales-and-repair-shop-in-leather-lane-clerkenwell-london-ec1-kathy-dewitt-PKD8Y2.jpg"
+    } 
+    ,{    "name":"Ride 2",
+        "distance":20, 
+        "rating":5,
+        "online":false, 
+        "discount":20,
+        "image":"https://payload.cargocollective.com/1/23/749111/13163658/Ryde-repair-shop-bikes_670.jpg"
+    },
+    {    "name":"Kenton",
+        "distance":20, 
+        "rating":2,
+        "online":true, 
+        "discount":10,
+        "image":"https://images.squarespace-cdn.com/content/v1/5c071dcdf407b498af97b3ac/1558133879416-E7F5JZ1QTLTSE6NJKOTA/image-asset.jpeg"
+    }
+    ,
+    {    "name":"Power Sport 1",
+        "distance":15, 
+        "rating":4,
+        "online":true, 
+        "discount":10,
+        "image":"https://honeyguideapps.com/sites/default/files/POwersports.jpg"
+    }
+    ,
+    {    "name":"Ride 1",
+        "distance":17, 
+        "rating":4,
+        "online":false, 
+        "discount":10,
+        "image":"https://payload.cargocollective.com/1/23/749111/13163658/Ryde-repair-shop-bikes_670.jpg"
+    }
+    ,
+    {    "name":"Kenton 1",
+        "distance":10, 
+        "rating":4,
+        "online":true, 
+        "discount":18,
+        "image":"https://images.squarespace-cdn.com/content/v1/5c071dcdf407b498af97b3ac/1558133879416-E7F5JZ1QTLTSE6NJKOTA/image-asset.jpeg"
+    },
+    {    "name":"FullCity 1",
+        "distance":10, 
+        "rating":4,
+        "online":false, 
+        "discount":10,
+        "image":"https://c8.alamy.com/comp/PKD8Y2/fullcity-cycles-bicycle-sales-and-repair-shop-in-leather-lane-clerkenwell-london-ec1-kathy-dewitt-PKD8Y2.jpg"
+    } 
+,
+    {    "name":"Power Sport 2",
+        "distance":25, 
+        "rating":5,
+        "online":false, 
+        "discount":30,
+        "image":"https://honeyguideapps.com/sites/default/files/POwersports.jpg"
+    },
+    {    "name":"Ride",
+        "distance":10, 
+        "rating":2,
+        "online":true, 
+        "discount":25,
+        "image":"https://payload.cargocollective.com/1/23/749111/13163658/Ryde-repair-shop-bikes_670.jpg"
+    },
+    {    "name":"Kenton 2",
+        "distance":20, 
+        "rating":5,
+        "online":false, 
+        "discount":5,
+        "image":"https://images.squarespace-cdn.com/content/v1/5c071dcdf407b498af97b3ac/1558133879416-E7F5JZ1QTLTSE6NJKOTA/image-asset.jpeg"
+    } ,
+    {    "name":"FullCity",
+        "distance":20, 
+        "rating":5,
+        "online":true, 
+        "discount":30,
+        "image":"https://c8.alamy.com/comp/PKD8Y2/fullcity-cycles-bicycle-sales-and-repair-shop-in-leather-lane-clerkenwell-london-ec1-kathy-dewitt-PKD8Y2.jpg"
+    } 
+]

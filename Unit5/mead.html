@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 80%;
+            margin: auto;
+        }
+        .outer > h1{
+            background-color: yellow;
+            margin: 20px;
+            padding: 20px;
+        }
+        @media (min-width: 800px) {
+            .outer > div{
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            gap: 20px;
+            height: 400px;
+            padding: 20px;
+            grid: "aa aa cc cc"
+                  "aa aa cc cc"
+                  "bb bb dd dd"
+                  "bb bb dd dd";
+              }
+      
+      }
+       
+        @media (min-width: 1024px) {
+            .outer > div{
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            height: 200px;
+            padding: 20px;
+            gap:20px;
+            grid: "aa aa bb bb cc cc dd dd"
+                  "aa aa bb bb cc cc dd dd"
+                  "aa aa bb bb cc cc dd dd";
+              }
+      
+      }
+      @media (max-width:799px){
+
+.outer > div{
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: auto;
+height: 600px;
+padding: 20px;
+gap:20px;
+grid: "aa aa"
+      "dd dd"
+      "bb bb"
+      "cc cc";
+
+} 
+}
+  
+      .outer > div > div:nth-child(1){
+            grid-area: aa;
+            padding: 20px;
+            background-color: red;
+        }
+        .outer > div > div:nth-child(2){
+            grid-area: bb;
+            padding: 20px;
+            background-color: green;
+        }
+        .outer > div > div:nth-child(3){
+            grid-area: cc;
+            padding: 20px;
+            background-color: blue;
+        }
+        .outer > div > div:nth-child(4){
+            background-color: grey;
+            padding: 20px;
+            grid-area: dd;
+        }
+     
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <h1>NEVIGATION</h1>
+        <div>
+             <div>Box1</div>
+             <div>Box2</div>
+             <div>Box3</div>
+             <div>Box4</div>
+        </div>
+    </div>
+    
+</body>
+</html>

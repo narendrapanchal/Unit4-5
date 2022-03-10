@@ -1,0 +1,26 @@
+h3{
+    text-align: left;
+    margin-right: 30px;
+    margin-left:30px
+}
+#dis_rat{
+display: flex;
+justify-content: space-between;
+}
+@media  only screen and (max-width: 800px) {
+  
+    img{
+        width: 300px
+    }
+} 
+@media  only screen and (min-width: 800px) {
+  
+    img{
+        width: 80%;
+        height:700px;
+        margin: auto;
+    }
+    #dis_rat{
+        margin:0px 40px 0px 40px ;
+    }
+} 
