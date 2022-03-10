@@ -1,7 +1,14 @@
-input{
-    color: white;background-color:green
-}
+
 #signup{
     display: flex;
     justify-content: center;
+}
+#signup input{
+    background-color: rgb(221, 233, 233);
+    color: #0E185F;
+    border-radius:30px;
+    border: 1px solid #0E185F;;
+}
+#signup input:focus{
+outline: none;
 }

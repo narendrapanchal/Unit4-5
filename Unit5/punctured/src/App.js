@@ -4,6 +4,7 @@ import {Navbar} from './components/Navbar/Navbar';
 import {Body} from './components/Body/Body';
 import {Shop} from './components/Shop/Shop';
 import {Payment} from './components/Payment/Payment';
+import {Order} from './components/Order/Order';
 import {Cart} from './components/Cart/Cart';
 import {Filter} from './components/Filter/Filter';
 import {Routes,Route} from "react-router-dom";
@@ -21,6 +22,8 @@ function App() {
        <Route path="/cart" element={<Cart/>}>
        </Route>
        <Route path="/payment" element={<Payment/>}>
+       </Route>
+       <Route path="/order" element={<Order/>}>
        </Route>
       </Routes>
     </div>
