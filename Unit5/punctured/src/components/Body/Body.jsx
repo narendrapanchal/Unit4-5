@@ -11,11 +11,12 @@ export const Body=()=>{
     useEffect(()=>{
         var temp=data;
         console.log(temp);
-        console.log(queryParams);
+        console.log(queryParams,"query");
+      if(Object.keys(queryParams).length!=0){
         if(queryParams.radius!="null"){
             console.log(temp,"hi");
             temp=temp.filter((ele)=>{
-                if(ele.radius<=queryParams.radius) return ele;
+                if(ele.distance<=queryParams.radius) return ele;
             })
         }
         console.log(temp);
@@ -27,15 +28,25 @@ export const Body=()=>{
         console.log(temp);
         if(queryParams.onlinePayment!="null"){
             temp=temp.filter((ele)=>{
-                if(ele.onlinePayment<=queryParams.onlinePayment) return ele;
+                if(queryParams.onlinePayment=="false") {
+                    if(queryParams.onlinePayment==false){
+                        return ele;
+                    }
+                }
+                if(queryParams.onlinePayment=="true") {
+                    if(queryParams.onlinePayment==true){
+                        return ele;
+                    }
+                }
             })
         }
         console.log(temp);
-        if(queryParams.rating!="null"){
+        if(queryParams.discount!="null"){
             temp=temp.filter((ele)=>{
-                if(ele.rating>=+queryParams.rating) return ele;
+                if(ele.discount>=+queryParams.discount) return ele;
             })
         }
+      }
         console.log(temp);
         setData(temp)
      },[]);
@@ -62,6 +73,7 @@ export const Body=()=>{
                </div>
 
              })}
+             {data.length?"":<div><b>No data Available</b></div>}
          </div>
         </div>
     )
