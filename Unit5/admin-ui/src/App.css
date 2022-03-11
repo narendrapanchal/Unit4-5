@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+  padding:30px
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+table {
+    border: 1px solid #333;
+  
+}
+
+thead,tfoot {
+    background-color: #333;
+    color: #fff;
+}
+table{
+  width: 100%;
+}
+ion-icon{
+  margin: 0px 10px 0px 10px;
+}
+td{
+  border-bottom: 1px solid black;
+}
+td >ion-icon:nth-child(2){
+  color: red;
+}
+#searchbar{
+  width: 100%;
+}
+#pagenumbers > button:nth-child(1){
+  background-color: blue;
+}
+#deletebutton{
+  background-color:crimson;
+  color: white;
+  border:none;
+  padding:10px;
+  border-radius:30px
+}
