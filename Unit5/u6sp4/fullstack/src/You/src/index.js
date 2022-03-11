@@ -10,3 +10,4 @@ app.listen(12345,async function(){
     await connect();
     console.log(12345);
 })
+// https://firstappdeploybynarendra.herokuapp.com/
