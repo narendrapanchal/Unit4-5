@@ -1,0 +1,90 @@
+[
+    {    "name":"Power Sport",
+        "distance":10, 
+        "rating":2,
+        "online":false, 
+        "discount":15,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4IEdJgLkpe-AprM9i-Z8G0l4c7UvPrLZXeg&usqp=CAU"
+    },
+    {    "name":"FullCity 2",
+        "distance":10, 
+        "rating":2,
+        "online":true, 
+        "discount":21,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_tcJOU18L6r6MgOfHSivqkN_MbqoRSV9oEA&usqp=CAU"
+    } 
+    ,{    "name":"Ride 2",
+        "distance":20, 
+        "rating":5,
+        "online":false, 
+        "discount":20,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmbYrNfcrm8UpZAYQlmpV4T0yrorakS8nL0g&usqp=CAU"
+    },
+    {    "name":"Kenton",
+        "distance":20, 
+        "rating":2,
+        "online":true, 
+        "discount":10,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0itrP5Z7nLuG-29x3HjrN_KNCPq2PSFdFw&usqp=CAU"
+    }
+    ,
+    {    "name":"Power Sport 1",
+        "distance":15, 
+        "rating":4,
+        "online":true, 
+        "discount":10,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4IEdJgLkpe-AprM9i-Z8G0l4c7UvPrLZXeg&usqp=CAU"
+    }
+    ,
+    {    "name":"Ride 1",
+        "distance":17, 
+        "rating":4,
+        "online":false, 
+        "discount":10,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmbYrNfcrm8UpZAYQlmpV4T0yrorakS8nL0g&usqp=CAU"
+    }
+    ,
+    {    "name":"Kenton 1",
+        "distance":10, 
+        "rating":4,
+        "online":true, 
+        "discount":18,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0itrP5Z7nLuG-29x3HjrN_KNCPq2PSFdFw&usqp=CAU"
+    },
+    {    "name":"FullCity 1",
+        "distance":10, 
+        "rating":4,
+        "online":false, 
+        "discount":10,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_tcJOU18L6r6MgOfHSivqkN_MbqoRSV9oEA&usqp=CAU"
+    } 
+,
+    {    "name":"Power Sport 2",
+        "distance":25, 
+        "rating":5,
+        "online":false, 
+        "discount":30,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4IEdJgLkpe-AprM9i-Z8G0l4c7UvPrLZXeg&usqp=CAU"
+    },
+    {    "name":"Ride",
+        "distance":10, 
+        "rating":2,
+        "online":true, 
+        "discount":25,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmbYrNfcrm8UpZAYQlmpV4T0yrorakS8nL0g&usqp=CAU"
+    },
+    {    "name":"Kenton 2",
+        "distance":20, 
+        "rating":5,
+        "online":false, 
+        "discount":5,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0itrP5Z7nLuG-29x3HjrN_KNCPq2PSFdFw&usqp=CAU"
+    } ,
+    {    "name":"FullCity",
+        "distance":20, 
+        "rating":5,
+        "online":true, 
+        "discount":30,
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_tcJOU18L6r6MgOfHSivqkN_MbqoRSV9oEA&usqp=CAU"
+    } 
+]

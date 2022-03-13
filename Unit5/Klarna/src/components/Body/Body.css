@@ -1,0 +1,118 @@
+.onediv{
+    margin-top:30px;
+    margin: 10px;
+    height:200px;
+    background-size: 100% 200px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.onediv > div{
+    height:200px;
+    background-color:rgb(0,0,0,0.3);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    text-align:left;
+    border-radius:10px
+}
+span{
+    cursor: pointer;
+}
+hr{
+    width:90%;
+    margin: auto;
+}
+.data{
+    display:grid;
+    justify-content:space-around
+}
+.onediv:hover{ 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 45px;
+}
+#filters{
+    text-align: right;
+    margin-right: 20px;
+}
+#filters > div{
+    display: flex;
+        flex-direction:column;
+        
+}
+#filters > div > span{
+    background-color: gray;
+    color:white;
+    border-radius: 30px;
+    padding:10px 20px;
+    text-align: center;
+} 
+#filters > div{
+    overflow-x: auto;
+}
+#filters > div::-webkit-scrollbar {
+    display: none;
+  }
+span{
+    margin:10px;
+    padding:10px;
+}
+
+input{
+    padding:10px;
+    border:none;
+    margin-left: 5%;
+}
+#bodydiv{
+    display: grid;
+    grid-template-columns:20% 80%;
+}
+input:focus{ 
+    outline:none;
+}
+.onediv > div> div:nth-child(1) span{
+    background-color:white;
+    border-radius: 50%;color:black;
+    color:red;
+    font-style: oblique;
+}
+
+.nameofplace{
+    color:black;
+    text-align: left;
+    margin:10px;
+    margin-bottom: 20px;
+    font-weight:bold;
+
+}
+.onelement{
+    border-radius: 230px;
+}
+.onediv > div> div:nth-child(2)> span{
+    font-size:20px
+}
+.onediv > div> div:nth-child(2)> span+br+span{
+    font-size:50px
+}
+@media   (min-width: 1050px) {
+    .data{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+@media  (max-width: 1050px) {  
+    .data{
+        grid-template-columns: 33% 33% 33%;
+    }
+} 
+@media  (max-width: 800px) {
+    .data{
+        grid-template-columns: 50% 50%;
+    }
+    #filters > div {
+        display: flex;
+        flex-direction:row;
+    }
+    #bodydiv{
+        display: grid;
+        grid-template-columns:100%;
+    }
+}

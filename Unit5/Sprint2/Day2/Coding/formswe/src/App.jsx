@@ -8,7 +8,7 @@ function App() {
   const inputRef=useRef(null);
  
   return (
-    <div className="App" className="style">
+    <div className="App style" className="style">
       {/* <button onClick={()=>{
        test.current++;
        console.log(test);
